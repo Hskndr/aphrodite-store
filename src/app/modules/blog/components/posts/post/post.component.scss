@@ -1,0 +1,30 @@
+mat-card-content p {
+  height: 3rem;
+  overflow: hidden;
+  text-align: justify;
+}
+mat-card-title a{
+  color: purple;
+}
+mat-card-actions {
+  height: 2.5em;
+}
+
+img {
+  max-height: 16rem;
+}
+mat-card-actions {
+  height: 2.5em;
+  margin: 0;
+  padding: 0;
+}
+mat-divider {
+  margin-bottom: 0.5rem;
+}
+a,
+.material-icons,
+.mat-icon,
+mat-icon {
+  cursor: pointer;
+}
+

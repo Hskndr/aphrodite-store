@@ -1,0 +1,44 @@
+.new-post-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.1rem;
+  form {
+    padding: 0.1rem;
+    /*  input[type="file"] {
+      display: none;
+    } */
+    mat-form-field {
+      margin: 0;
+    }
+
+    .container-input-file {
+      margin: 1rem;
+    }
+
+    input.mat-flat-button {
+      width: 100%;
+      /*  color: #FFFFFF; */
+      color: black;
+      background: rgba(229, 85, 40, 0.8);
+      &:hover {
+        background: rgba(110, 33, 10, 0.8);
+      }
+    }
+
+    .custom-file {
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .container-button {
+      min-height: 80px;
+    }
+
+    mat-form-field {
+      width: 100%;
+    }
+  }
+}

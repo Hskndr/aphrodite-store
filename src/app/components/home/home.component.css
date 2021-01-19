@@ -1,0 +1,32 @@
+.image-post {
+  height: 16rem;
+}
+
+.card-img-top {
+  min-height: 15rem;
+}
+
+.card-text {
+  height: 7rem;
+  font-size: 0.9rem;
+  overflow: hidden;
+}
+
+mat-card {
+  margin-top: 0.5rem;
+}
+
+.button-main-over {
+  color:  rgb(39, 129, 107);
+}
+.button-main-over:hover {
+  background-color: rgba(18, 238, 183, 0.1);
+  color: #000;
+}
+.button-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0px;
+}

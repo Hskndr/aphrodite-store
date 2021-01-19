@@ -1,0 +1,38 @@
+<section class="about-section">
+
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{developer.name }} {{ developer.lastName }}</mat-card-title>
+      <mat-card-subtitle>About Me</mat-card-subtitle>
+    </mat-card-header>
+
+    <article>
+      <mat-card-content class="about-article">
+
+        <img class="img-about" src="assets/fotoPerfil.jpg" alt="Profile Pic">
+
+
+      </mat-card-content>
+
+      <mat-card-content class="about-article">
+        <mat-card-title>{{ developer.profession }}</mat-card-title>
+        <p>
+          {{developer.extract }}
+        </p>
+      </mat-card-content>
+    </article>
+
+
+    <mat-card-content class="about-article-skills">
+      <mat-card class="card-skill" *ngFor="let skill of developer.skills">
+        <img mat-card-avatar class="example-header-image" [src]="skill.img">
+        <button mat-button>{{ skill.name }}</button>
+        <p>{{ skill.description }}</p>
+      </mat-card>
+    </mat-card-content>
+
+
+  </mat-card>
+
+</section>

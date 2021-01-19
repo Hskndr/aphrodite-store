@@ -1,0 +1,160 @@
+/* Normalize */
+
+@import '~normalize.css';
+/*General*/
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  /* Slow Transition between anchor */
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+
+header {
+  min-height: 11vh;
+  background-color: #000;
+  padding: 0.25rem;
+}
+
+header button {
+  color: #fff!important;
+}
+
+main {
+  min-height: 80vh;
+  background-color: rgba(21, 209, 162, 0.1);
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer */
+
+footer {
+  min-height: 10vh;
+  /* Delete */
+  /*   background-color: white;
+ */
+}
+
+footer .mat-toolbar {
+  font-size: 1rem;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  /*   color: rgb(38, 10, 218);
+ */
+}
+
+/*Buttons*/
+
+.button-main {
+  color: rgba(0, 0, 0, 0.8)!important;
+  background-color: rgba(21, 209, 162, 0.1)!important;
+}
+
+/*Headers*/
+
+/* AUTH */
+
+/* LOGIN */
+
+.login-register-container {
+  height: 100%;
+  /* Delete */
+}
+
+/* For Login Register Forgot-Password */
+
+.login-register-card {
+  max-width: 35em;
+  margin: 1em auto;
+}
+
+form {
+  margin: 1rem;
+}
+
+form mat-form-field {
+  width: 100%;
+}
+
+/* WRAP CONTAINER */
+
+.wrap-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wrap-content {
+  width: 19em;
+  margin: 0.5em;
+}
+
+/*BLOG*/
+
+/*PRODUCTS*/
+
+.post-products {
+  /*  background-color: green;
+ */
+}
+
+.container-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/*TOOLBAR*/
+
+/* Toolbar Spacer */
+
+.tool-bar-space {
+  flex: 1 1 auto;
+}
+
+mat-chip .mat-chip.mat-primary.mat-standart-chip {
+  min-height: 1em;
+  padding: 0.1em;
+}
+
+/* Main toolbar Background-color */
+
+.mat-toolbar {
+  background: #ccc;
+  color: #fff;
+  /* Delete */
+  /*   background-color: limegreen; */
+}
+
+/* My Styles */
+
+/* Helpers to Delete */
+
+.borderb {
+  border: 1px solid black;
+}
+
+.borderw {
+  border: 1px solid white;
+}
+
+/* Responsive site Media Querys  */
+
+@media (max-width: 575.98px) {}
+
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+@media (min-width: 1200px) {}

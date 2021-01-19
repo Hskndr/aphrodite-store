@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/aphrodite-online",
+    "public": "dist/aphrodite",
     "ignore": [
       "firebase.json",
       "**/.*",

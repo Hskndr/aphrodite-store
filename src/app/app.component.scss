@@ -1,0 +1,28 @@
+/* Main Toolbar */
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  height: 100%;
+}
+.false-header {
+  padding: 0;
+  padding-bottom: 0.1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  margin-left: -0.28rem;
+  margin-top: -0.28rem;
+  background-color: #000;
+}
+header .ship {
+  text-align: center;
+  color: #333333;
+  font-size: 0.85rem;
+  background-color: rgb(156, 250, 226);
+}
+mat-icon {
+  margin-right: 1rem;
+}
+mat-sidenav {
+  width: 350px;
+}

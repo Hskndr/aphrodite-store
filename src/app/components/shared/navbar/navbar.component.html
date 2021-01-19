@@ -1,0 +1,69 @@
+<nav>
+  <mat-toolbar>
+    <mat-toolbar-row fxLayout="row" >
+      <!-- Responsive Button -->
+      <div fxHide.gt-xs >
+        <button mat-icon-button (click)="onToggleSidenav()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+
+      <a routerLink="home" fxFlexAlign="stretch" >
+        <img src="assets/images/aphrodite.jpg" class="nav-img" />
+      </a>
+
+
+
+      <div  fxHide.xs class="content-list">
+        <ul fxLayout="row" dir="ltr" fxLayoutGap="50px" class="navigation-items">
+          <li></li>
+          <li>
+            <button mat-button routerLinkActive="active" [routerLink]="['home']">
+              <span>Inicio</span>
+            </button>
+          </li>
+
+          <li>
+            <button mat-button routerLinkActive="active" [routerLink]="['blog/home-blog']">
+              <span>Productos</span>
+            </button>
+          </li>
+
+          <li>
+            <div class="user-info" *ngIf="user$ | async as user; else login">
+
+              <button mat-mini-fab [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <img class="imageProfileNavbar" [src]="user.photoURL" alt="" loading="lazy" />
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <span>{{ user?.email }}</span>
+                </button>
+                <button mat-menu-item routerLinkActive="active" *ngIf="user" (click)="onLogout()">
+                  <mat-icon>exit_to_app</mat-icon>
+                  <span>Cerrar Sesión</span>
+                </button>
+
+              </mat-menu>
+
+            </div>
+          </li>
+          <li>
+            <ng-template #login>
+              <!--  <button mat-button routerLinkActive="active" [routerLink]="['register']">
+                <span class="material-icons">add_circle_outline</span>
+                <span>Register</span>
+              </button> -->
+
+              <button mat-button outerLinkActive="active" [routerLink]="['login']">
+                <span class="material-icons">login</span>
+              </button>
+            </ng-template>
+          </li>
+        </ul>
+
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+</nav>
