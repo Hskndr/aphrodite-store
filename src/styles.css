@@ -1,0 +1,176 @@
+/* Normalize */
+
+@import '~normalize.css';
+/*General*/
+
+:root {
+  --color-one: #000;
+  --color-two: rgb(42, 46, 6);
+  --color-three: rgb(185, 192, 193);
+  --color-four: rgb(236, 234, 227);
+  --color-five: rgb(164, 213, 218);
+  --color-six: rgb(94, 152, 159);
+  --color-seven: #DEF7F3;
+  --color-eight: #ffffff;
+  --color-nine:  rgba(21, 209, 162, 0.1);
+}
+
+body {
+  background-color: var(--color-one);
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  /* Slow Transition between anchor */
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+
+header {
+  min-height: 11vh;
+  background-color: var(--color-one);
+  padding: 0.25rem;
+}
+
+header button {
+  color: var(--color-eight)!important;
+}
+
+main {
+  min-height: 80vh;
+  background-color: rgba(21, 209, 162, 0.1);
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer */
+
+footer {
+  min-height: 10vh;
+}
+
+footer .mat-toolbar {
+  font-size: 1rem;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+/*Buttons*/
+
+.button-main {
+  color: rgba(0, 0, 0, 0.8)!important;
+  background-color: rgba(21, 209, 162, 0.1)!important;
+}
+
+/*Headers*/
+
+/* AUTH */
+
+/* LOGIN */
+
+.login-register-container {
+  height: 100%;
+}
+
+/* For Login Register Forgot-Password */
+
+.login-register-card {
+  max-width: 35em;
+  margin: 1em auto;
+}
+
+form {
+  margin: 1rem;
+}
+
+form mat-form-field {
+  width: 100%;
+}
+
+/* WRAP CONTAINER */
+
+.wrap-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wrap-content {
+  width: 19em;
+  margin: 0.5em;
+}
+
+/*BLOG*/
+
+/*PRODUCTS*/
+
+
+.container-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*TOOLBAR*/
+
+/* Toolbar Spacer */
+
+.tool-bar-space {
+  flex: 1 1 auto;
+}
+
+mat-chip .mat-chip.mat-primary.mat-standart-chip {
+  min-height: 1em;
+  padding: 0.1em;
+}
+
+/* Main toolbar Background-color */
+
+.mat-toolbar {
+  background: #ccc;
+  color: var(--color-eight);
+  /* Delete */
+  /*   background-color: limegreen; */
+}
+
+/* My Styles */
+
+/* Helpers to Delete */
+
+.borderb {
+  border: 1px solid black;
+}
+
+.borderw {
+  border: 1px solid white;
+}
+.color{width: 45px;height: 45px;}
+.one{background-color:var(--color-one);}
+.two{background-color:var(--color-two);}
+.three{background-color:var(--color-three);}
+.four{background-color:var(--color-four);}
+.five{background-color:var(--color-five);}
+.six{background-color:var(--color-six);}
+.seven{background-color:var(--color-seven);}
+.eight{background-color:var(--color-eight);}
+
+
+/* Responsive site Media Querys  */
+
+@media (max-width: 575.98px) {}
+
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+@media (min-width: 1200px) {}

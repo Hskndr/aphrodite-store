@@ -1,0 +1,30 @@
+div{
+  width: 100%;
+}
+mat-card{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 30%;
+}
+
+button{
+  margin: 1rem auto;
+}
+
+@media (max-width: 599.98px) {
+  mat-card{
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+  button{
+    margin: 1rem auto;
+  }
+
+  mat-card-subtitle{
+    font-size: 1rem;
+
+  }
+}
+

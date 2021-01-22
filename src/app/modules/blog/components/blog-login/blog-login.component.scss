@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+mat-card-tittle,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 100%;
+  color: black;
+  background: rgba(229, 85, 40, 0.8);
+  &:hover {
+    background: rgba(110, 33, 10, 0.8);
+  }
+}

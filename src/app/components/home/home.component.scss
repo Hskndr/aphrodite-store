@@ -1,0 +1,57 @@
+.image-post {
+  height: 16rem;
+}
+
+.card-img-top {
+  min-height: 15rem;
+}
+
+.card-text {
+  height: 7rem;
+  font-size: 0.9rem;
+  overflow: hidden;
+}
+
+mat-card {
+  margin-top: 0.5rem;
+}
+
+.button-main-over {
+  color: rgb(39, 129, 107);
+}
+.button-main-over:hover {
+  background-color: rgba(18, 238, 183, 0.1);
+  color:var(--color-one);
+}
+.button-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0px;
+}
+
+#about {
+  background-image: url("/assets/images/aphrodite.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--color-one);
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--color-eight);
+
+  p {
+    width: 60vw;
+    padding: 1rem;
+    margin: auto;
+    opacity: 0.8;
+    border-radius: 0.5rem;
+    &:hover {
+      background-color:var(--color-one);
+      font-size: 1.2rem;
+    }
+  }
+}

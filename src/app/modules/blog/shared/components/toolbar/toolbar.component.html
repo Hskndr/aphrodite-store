@@ -1,0 +1,33 @@
+<mat-toolbar color="link" *ngIf="user$ | async as user">
+  <mat-nav-list routerLinkActive="active">
+    <a [routerLink]="['/blog/home-blog']" >
+      <mat-icon>view_list</mat-icon>Products
+    </a>
+  </mat-nav-list>
+
+  <span class="tool-bar-space"></span>
+
+  <mat-nav-list>
+    <a
+      [routerLink]="['/blog/blog-admin/posts']"
+      routerLinkActive="active"
+      *ngIf="authBlogSvc.userData$ | async"
+    >
+      <button mat-button><mat-icon>admin_panel_settings</mat-icon>Admin</button>
+    </a>
+  </mat-nav-list>
+
+  <mat-nav-list>
+   <!--  <a
+      *ngIf="authBlogSvc.userData$ | async; else showLogin"
+      (click)="onBlogLogout()"  routerLinkActive="active"
+    >
+      <button mat-button><mat-icon>exit_to_app</mat-icon> Logout</button>
+    </a> -->
+  </mat-nav-list>
+  <ng-template #showLogin>
+   <!--  <a [routerLink]="['/blog/blog-login']" routerLinkActive="active">
+      <button mat-button><mat-icon>login</mat-icon> Login</button>
+    </a> -->
+  </ng-template>
+</mat-toolbar>

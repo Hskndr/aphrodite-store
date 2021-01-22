@@ -1,0 +1,37 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <!--this is a place for us to add side-nav code-->
+    <app-side-nav-list (sidenavClose)="sidenav.close()"></app-side-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!--in here all the content must reside. We will add a navigation header as well-->
+    <header>
+      <div class="false-header">
+
+        <div class="ship" fxLayout="row" fxLayoutAlign="center center">
+          <mat-icon>local_shipping</mat-icon>Envios Gratis desde $3000
+        </div>
+        <app-navbar (sidenavToggle)="sidenav.toggle()"></app-navbar>
+      </div>
+    </header>
+    <main>
+<!--       <div style="display: flex;">
+        <div class="color one"> one </div>
+        <div class="color two"> two </div>
+        <div class="color three"> three</div>
+        <div class="color four"> four</div>
+
+        <div class="color five"> five</div>
+        <div class="color six"> six</div>
+        <div class="color seven"> seven</div>
+        <div class="color eight"> eight</div>
+      </div>
+ -->
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- <footer>
+  <app-footer></app-footer>
+</footer> -->

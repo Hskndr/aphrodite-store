@@ -1,0 +1,74 @@
+/* Background color */
+
+.mat-toolbar {
+  background:var(--color-one);
+}
+
+.nav-img {
+  max-height: 7vh;
+}
+
+.content-list {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--color-eight);
+}
+
+a:hover {
+  color: rgba(21, 209, 162, 0.1)!important;
+}
+
+/* Active Router */
+
+.active {
+  background-color: rgba(21, 209, 162, 0.1)!important;
+  border-radius: 5px;
+}
+
+.material-icons {
+  font-size: 1em;
+}
+
+/* user-info */
+
+.user-info {
+  margin: 0;
+  padding: 0;
+}
+
+.imageProfileNavbar {
+  width: 2rem;
+}
+
+/* Responsive */
+
+@media (max-width: 575.98px) {}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover, a:active {
+  color: lightgray;
+}
+
+.navigation-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+mat-toolbar {
+  border-radius: 3px;
+}
+
+@media(max-width: 959px) {
+  mat-toolbar {
+    border-radius: 0px;
+  }
+}

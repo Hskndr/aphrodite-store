@@ -1,0 +1,33 @@
+/* Structure */
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 1rem;
+  width: 98%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 1rem;
+}
+
+.container-btn-new {
+  display: flex;
+  justify-content: flex-end;
+  width: 99.9%;
+  margin: 1rem -0,6;
+  button {
+    margin-right: 10%;
+    margin-bottom: 1rem;
+    color: black;
+    cursor: pointer;
+    &:hover {
+      background: rgba(110, 33, 10, 0.8);
+    }
+  }
+}

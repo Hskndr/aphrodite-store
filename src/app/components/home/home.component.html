@@ -1,0 +1,73 @@
+<section>
+  <article>
+
+    <!-- CAROUSEL -->
+    <div id="home">
+      <app-carousel></app-carousel>
+    </div>
+
+    <!-- SHIPING CARD-->
+    <mat-card id="shipping">
+      <app-shipping></app-shipping>
+    </mat-card>
+
+
+    <!--PRODUCTS CARD-->
+    <mat-card id="products">
+      <div class="wrap-container" *ngIf="posts$ | async as posts">
+
+        <mat-card class="wrap-content post-products" *ngFor="let post of posts | slice:0:12 ">
+          <mat-card-header>
+            <!-- Card Product -->
+            <mat-card-title> {{ post.titlePost }}</mat-card-title>
+          </mat-card-header>
+          <mat-divider></mat-divider>
+
+
+          <mat-card>
+            <img mat-card-image class="image-post" [src]="post.imagePost" alt="Image Post" />
+
+            <mat-card-content>
+              <p>{{ post.pricePost |currency: '$ ARS ' }}</p>
+            </mat-card-content>
+
+            <mat-card-actions>
+              <div *ngFor="let tag of post.tagsPost" [ngClass]="tag">
+                #{{ tag | uppercase}}
+              </div>
+            </mat-card-actions>
+          </mat-card>
+        </mat-card>
+      </div>
+
+      <div class="button-container">
+        <button class="button-main" mat-flat-button color="button-main" [routerLink]="['/blog/home-blog']">
+          Ver todos los productos
+        </button>
+      </div>
+
+    </mat-card>
+
+    <!--
+        ABOUT CARD
+      -->
+    <mat-card id="about">
+      <p >
+        Aphrodite (en en griego antiguo, Ἀφροδίτη) es, en la la mitología griega, la diosa de la belleza, la sensualidad
+        y el amor.
+
+        Por eso te traemos los mejores productos de belleza y Boutique Femenina para que saques La Diosa que hay en ti
+        en un solo lugar con los mejores precios y ofertas.
+      </p>
+    </mat-card>
+
+    <!--
+        PRODUCTS CARD
+      -->
+    <mat-card id="contact">
+      <app-contact></app-contact>
+    </mat-card>
+
+  </article>
+
+</section>
