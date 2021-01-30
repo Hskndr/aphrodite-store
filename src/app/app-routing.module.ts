@@ -28,30 +28,30 @@ const routes: Routes = [
     canActivate: [CanEditGuard]
   },
   // Auth
-  {
+  /* {
     path: 'forgot-password',
     loadChildren: () => import('./auth/forgot-password/forgot-password.module')
       .then(m => m.ForgotPasswordModule)
-  },
+  }, */
   {
     path: 'login',
     loadChildren: () => import('./auth/login/login.module')
       .then(m => m.LoginModule)
   },
-  {
+ /*  {
     path: 'register',
     loadChildren: () => import('./auth/lregister/lregister.module')
       .then(m => m.LregisterModule)
-  },
-  {
+  }, */
+  /* {
     path: 'verification-email',
     component: SendEmailComponent
-  },
+  }, */
 
 
   // Blog
   {
-    path: 'blog',
+    path: 'product',
     loadChildren: () => import('./modules/blog/blog.module')
       .then(m => m.BlogModule)
   },

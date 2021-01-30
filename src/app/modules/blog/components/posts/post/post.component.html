@@ -1,7 +1,7 @@
 <mat-card-header>
   <!-- Card Product -->
   <mat-card-title>
-    <a [routerLink]="['/blog/blog-post', post.id]">
+    <a [routerLink]="['/product/product-post', post.id]">
       {{ post.titlePost }}
     </a>
   </mat-card-title>
@@ -16,7 +16,7 @@
       {{ post.contentPost }}
     </p>
     <mat-card-subtitle>
-      <a [routerLink]="['/blog/blog-post', post.id]">
+      <a [routerLink]="['/product/product-post', post.id]">
         Ver más...
       </a>
     </mat-card-subtitle>

@@ -23,7 +23,7 @@ export class AuthBlogGuard implements CanActivate {
       map(user => {
         if (!user) {
           //Redirect Login Page
-          this.router.navigate(['/blog-login']);
+          this.router.navigate(['/product-login']);
           return false;
         }
         return true;

@@ -1,7 +1,9 @@
 .image-post {
   height: 16rem;
 }
-
+.title-productos{
+  text-align: center;
+}
 .card-img-top {
   min-height: 15rem;
 }
@@ -16,13 +18,6 @@ mat-card {
   margin-top: 0.5rem;
 }
 
-.button-main-over {
-  color: rgb(39, 129, 107);
-}
-.button-main-over:hover {
-  background-color: rgba(18, 238, 183, 0.1);
-  color:var(--color-one);
-}
 .button-container {
   width: 100%;
   display: flex;
@@ -30,7 +25,9 @@ mat-card {
   justify-content: center;
   margin: 1rem 0px;
 }
-
+#home{
+  margin-top: 0.1rem;
+}
 #about {
   background-image: url("/assets/images/aphrodite.jpg");
   background-attachment: fixed;

@@ -1,0 +1,26 @@
+<mat-card class="message-card" *ngIf="msgDetail$ | async as message;">
+
+  <mat-card-header>
+    <mat-card-title>
+      {{message.name}}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{message.email}}
+    </mat-card-subtitle>
+    <mat-card-subtitle>
+      <label>
+        Enviado el:
+      </label>
+      <span>
+        {{message.date | dateFirebase }}
+      </span>
+    </mat-card-subtitle>
+
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    {{message.message}}
+  </mat-card-content>
+
+
+</mat-card>

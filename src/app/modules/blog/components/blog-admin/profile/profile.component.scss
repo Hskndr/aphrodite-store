@@ -13,8 +13,8 @@ form {
       p {
         position: absolute;
         width: 100%;
-        background-color: rgba(229, 85, 40, 0.8);
-        color: black;
+        background-color: var(--color-six);
+        color: var(--color-eight);
         text-transform: uppercase;
         transition: all 0, 5s ease;
       }
@@ -23,9 +23,9 @@ form {
         display: block;
         width: 150px;
         height: 150px;
-        border: 2px solid white;
+        border: 2px solid var(--color-eight);
         &:hover {
-          border: 2px solid rgba(110, 33, 10, 0.8);
+          border: 2px solid var(--color-six);
           cursor: pointer;
         }
       }

@@ -13,12 +13,18 @@ mat-sidenav {
   margin-left: -0.28rem;
   margin-top: -0.28rem;
   background-color: var(--color-one);
+  a {
+    margin-left: 0.5rem;
+  }
 }
+
+/* TODO: Delete */
 header .ship {
   text-align: center;
   color: var(--color-two);
   font-size: 0.85rem;
-  background-color:var(--color-seven);
+  background-color: var(--color-seven);
+  padding-right: 0.5rem;
 }
 mat-icon {
   margin-right: 1rem;

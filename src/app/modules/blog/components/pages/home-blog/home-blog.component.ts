@@ -17,6 +17,7 @@ export class HomeBlogComponent implements OnInit {
   ) { }
   ngOnInit() {
     this.posts$ = this.postSvc.getAllPosts();
+    console.log('Home-blog', this.posts$);
   }
 
 }

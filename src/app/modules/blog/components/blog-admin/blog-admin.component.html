@@ -1,39 +1,8 @@
-<mat-toolbar color="primary" class="navbar">
-   <!--  <span color="primary" (click)="opened = !opened">
-      <mat-icon>menu</mat-icon>
-    </span> -->
-    <mat-nav-list>
-      <a class="ml-1" routerLink="/blog/home-blog">
-        <mat-icon>home</mat-icon>Inventario
-      </a>
-
-    </mat-nav-list>
-    <span class="tool-bar-space"></span>
-
-    <mat-nav-list>
-      <a mat-list-item routerLink="posts">
-        <mat-icon>book</mat-icon>Productos
-      </a>
-    </mat-nav-list>
-    <mat-nav-list>
-      <a mat-list-item routerLink="message">
-        <mat-icon>email</mat-icon>Mensajes
-      </a>
-    </mat-nav-list>
-   <hr>
-
-    <mat-nav-list>
-      <a mat-list-item routerLink="profile">
-        <mat-icon>account_circle</mat-icon>Perfil
-      </a>
-    </mat-nav-list>
-
-
-</mat-toolbar>
+<app-blog-toolbar></app-blog-toolbar>
 
 <mat-sidenav-container>
 
- <!--  <mat-sidenav #sideNav [(opened)]="opened" mode="side">
+  <!--  <mat-sidenav #sideNav [(opened)]="opened" mode="side">
 
     <mat-nav-list>
       <a mat-list-item routerLink="posts">
@@ -54,4 +23,3 @@
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-

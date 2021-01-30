@@ -43,7 +43,7 @@ export class TableComponent implements OnInit, AfterViewInit {
 
 
   onEditPost(post: PostI) {
-    console.log('Edit post0', post);
+    console.log('Edit post table comp', post);
     this.openDialog(post);
     console.log('End onEdit3');
 

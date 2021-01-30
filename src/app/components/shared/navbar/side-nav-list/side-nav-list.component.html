@@ -1,17 +1,17 @@
 <mat-nav-list>
   <a mat-list-item (click)="onSidenavClose()">
-    <span class="material-icons">close</span>
+    <mat-icon>close</mat-icon>
     <span></span>
   </a>
 
   <a mat-list-item (click)="onSidenavClose()" [routerLink]="['home']">
-    <span class="material-icons">home</span>
+    <mat-icon>home</mat-icon>
     <span>Inicio</span>
   </a>
 
 
-  <a mat-list-item (click)="onSidenavClose()" [routerLink]="['blog/home-blog']">
-    <span class="material-icons">receipt </span>
+  <a mat-list-item (click)="onSidenavClose()" [routerLink]="['product/home-product']">
+    <mat-icon>store</mat-icon>
     <span>Productos</span>
   </a>
 
@@ -31,12 +31,12 @@
 
   <ng-template #login>
     <!--   <a mat-list-item (click)="onSidenavClose()" [routerLink]="['register']">
-      <span class="material-icons">add_circle_outline</span>
+      <mat-icon>add_circle_outline</mat-icon>
       <span>Register</span>
     </a> -->
 
     <a mat-list-item (click)="onSidenavClose()" [routerLink]="['login']">
-      <span class="material-icons">login</span>
+      <mat-icon>login</mat-icon>
       <span>Iniciar Sesión</span>
     </a>
   </ng-template>

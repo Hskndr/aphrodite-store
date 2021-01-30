@@ -10,18 +10,18 @@ const routes: Routes = [
     component: BlogComponent,
     children: [
       {
-        path: 'home-blog',
+        path: 'home-product',
         loadChildren: () => import('./components/pages/home-blog/home-blog.module').then(m => m.HomeBlogModule)
       },
       {
-        path: 'blog-post/:id',
+        path: 'product-post/:id',
         component: DetailsPostComponent
       },
     ]
   },
 
-  { path: 'blog-admin', loadChildren: () => import('./components/blog-admin/blog-admin.module').then(m => m.BlogAdminModule) },
-  { path: 'blog-login', loadChildren: () => import('./components/blog-login/blog-login.module').then(m => m.BlogLoginModule) },
+  { path: 'product-admin', loadChildren: () => import('./components/blog-admin/blog-admin.module').then(m => m.BlogAdminModule) },
+  { path: 'product-login', loadChildren: () => import('./components/blog-login/blog-login.module').then(m => m.BlogLoginModule) },
 ];
 
 @NgModule({

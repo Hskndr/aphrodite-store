@@ -62,7 +62,7 @@ import { ShippingComponent } from './components/shipping/shipping.component';
     AngularFireStorageModule,
     // Flex layout
     FlexLayoutModule,
-    //Carouserl
+    // Carouserl
     MatCarouselModule.forRoot(),
 
 

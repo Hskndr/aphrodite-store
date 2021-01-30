@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogAdminComponent implements OnInit {
   public opened = false;
-  constructor() { }
+
+  constructor(
+
+  ) { }
 
   ngOnInit(): void {
+
   }
+
 
 }

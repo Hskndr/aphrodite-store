@@ -2,9 +2,7 @@
   <mat-card class="login-register-card">
 
     <mat-card-header>
-      <mat-card-title>
-        INICIAR SESION
-      </mat-card-title>
+      <mat-card-title>INICIAR SESION</mat-card-title>
     </mat-card-header>
     <mat-card-content>
 
@@ -26,30 +24,33 @@
           </mat-form-field>
         </div>
 
-        <button mat-raised-button color="primary" type="submit">INICIAR SESION</button>
+        <div class="content-button-main">
+          <button mat-raised-button class="button-main" type="submit">INICIAR SESION</button>
+        </div>
       </form>
+
+      <!-- <mat-divider></mat-divider>
+      <p class="login-register-p">
+        Iniciar Sesión con tu cuenta Google
+      </p>
+      <mat-divider></mat-divider>
+      <div class="content-button-main">
+        <button class="button-main" mat-button (click)="onGoogleLogin()">
+          <img src="assets/logo/google-icon.svg" width="30" height="30" alt="Google Logo" loading="lazy" />
+          Google
+        </button>
+      </div>
+
+      <p class="login-register-p">
+        Crea tu cuenta
+        <a [routerLink]="['/register']"> Registro</a>
+      </p>
+      <p class="login-register-p">
+        <a [routerLink]="['/forgot-password']">Olvidaste tu contraseña</a>
+      </p> -->
     </mat-card-content>
 
 
-    <!--   <hr>
-    <p>
-      Or login with
-    </p>
-    <hr>
-
-    <mat-card-footer>
-      <button mat-button (click)="onGoogleLogin()">
-        <img src="assets/logo/google-icon.svg" width="30" height="30" alt="Google Logo" loading="lazy" />
-        Google
-      </button>
-      <p>
-        Create an account ?
-        <a [routerLink]="['/register']"> Register</a>
-      </p>
-      <p>
-        <a [routerLink]="['/forgot-password']">Forgot Password</a>
-      </p>
-    </mat-card-footer> -->
   </mat-card>
 
 </section>

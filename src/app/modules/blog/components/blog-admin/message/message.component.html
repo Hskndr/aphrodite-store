@@ -1,15 +1,38 @@
-  <mat-card-title>Mensajes</mat-card-title>
+<mat-card-title class="title-msg">Mensajes</mat-card-title>
 
-<div class="wrap-container" *ngIf="message$ | async as messages">
+<div class="wrap-container" *ngIf="message$ | async as messages, else empty">
   <mat-card class="wrap-content post-products" *ngFor="let message of messages">
+
     <mat-card-header>
       <mat-card-title>
-        {{message.name}}
+        <a [routerLink]="['/product/product-admin/msg-detail',message.id]" (click)="readMessage(message)">
+          {{message.name}}
+        </a>
       </mat-card-title>
-      <mat-card-subtitle>{{message.email}}</mat-card-subtitle>
+      <mat-card-subtitle>
+        <mat-label>Enviado el: </mat-label>{{message.date | dateFirebase }}
+      </mat-card-subtitle>
     </mat-card-header>
+
     <mat-card-content>
-      {{message.message}}
+      <button *ngIf="message.read == true" (click)="unreadMessage(message)" mat-mini-fab color="primary"
+        aria-label="Example icon button with a menu icon">
+        <mat-icon>mark_email_read</mat-icon>
+      </button>
+      <button *ngIf="message.read == false" (click)="readMessage(message)" mat-mini-fab color="warn"
+        aria-label="Example icon button with a menu icon">
+        <mat-icon>mark_email_unread</mat-icon>
+      </button>
     </mat-card-content>
+
   </mat-card>
 </div>
+<!-- Para cuando esté cargando -->
+<ng-template #empty>
+  <div class="container-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
+
+<mat-card>
+</mat-card>

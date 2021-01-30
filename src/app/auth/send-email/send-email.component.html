@@ -1,26 +1,35 @@
-
-
 <section class="login-register-container">
   <mat-card class="login-register-card" *ngIf="user$ | async as user;else loading">
 
-    <h3>THANKS YOU FOR REGISTERING</h3>
-    <p class="text-center">
-      We have sent a confirmation email to <strong>{{ user?.email }}</strong>
-    </p>
-    <p class="text-center">
-      Please check your email and click on the link to verify your email
-      address.
-    </p>
+    <mat-card-header>
+      <mat-card-title>GRACIAS POR REGISTRARTE</mat-card-title>
+    </mat-card-header>
 
-    <button mat-button (click)="onSendVerificationEmail()">
-      Resend verification email
-    </button>
+    <mat-card-content>
+      <p class="login-register-p">
+        Hemos enviado un email de confirmación a la dirección <strong>{{ user?.email }}</strong>
+      </p>
+      <p class="login-register-p">
+        Por favor verifica tu email y haz click en el link para verificar tu dirección.
+      </p>
+      <div class="content-button-main">
 
+        <button mat-button (click)="onSendVerificationEmail()">
+          Resend verification email
+        </button>
+      </div>
+    </mat-card-content>
   </mat-card>
 
   <ng-template #loading>
     <mat-card class="login-register-card">
-      <p>Go to Login</p>
-    </mat-card>
+      <mat-card-header>
+        <mat-card-title>USUARIO VERIFICADO</mat-card-title>
+      </mat-card-header>
+      <p class="login-register-p">
+        Ir a
+        <a [routerLink]="['/login']"> Iniciar Sesión</a>
+      </p>
+  </mat-card>
   </ng-template>
 </section>

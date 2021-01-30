@@ -1,5 +1,11 @@
-  mat-card-title{
-    width: 100%;
-    text-align: center;
-    margin: 0.5rem auto;
-  }
+.title-msg {
+  width: 100%;
+  text-align: center;
+}
+
+mat-card-header,
+mat-card-content {
+  width: 100%;
+  text-align: justify;
+  margin: 0.5rem auto;
+}

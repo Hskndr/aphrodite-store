@@ -3,7 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MessageComponent } from './message.component';
 
-const routes: Routes = [{ path: '', component: MessageComponent }];
+const routes: Routes = [
+  {
+    path: '', component: MessageComponent,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

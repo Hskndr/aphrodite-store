@@ -8,11 +8,11 @@ import { MatCarousel, MatCarouselComponent } from 'ng-mat-carousel';
 })
 export class CarouselComponent implements OnInit {
   slides = [
-    { 'image': 'assets/images/01.jpeg' },
-    { 'image': 'assets/images/02.jpeg' },
-    { 'image': 'assets/images/03.jpeg' },
-    { 'image': 'assets/images/04.jpeg' },
-    { 'image': 'assets/images/05.jpeg' },
+    { 'image': 'assets/images/carousel/carousel1.png' },
+    { 'image': 'assets/images/carousel/carousel2.png' },
+    { 'image': 'assets/images/carousel/carousel3.png' },
+    { 'image': 'assets/images/carousel/carousel4.png' },
+    { 'image': 'assets/images/carousel/carousel5.png' },
   ];
   constructor() { }
 

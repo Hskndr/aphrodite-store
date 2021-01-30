@@ -14,6 +14,7 @@
 
     <!--PRODUCTS CARD-->
     <mat-card id="products">
+      <mat-card-title class="title-productos">Productos</mat-card-title>
       <div class="wrap-container" *ngIf="posts$ | async as posts">
 
         <mat-card class="wrap-content post-products" *ngFor="let post of posts | slice:0:12 ">
@@ -41,7 +42,7 @@
       </div>
 
       <div class="button-container">
-        <button class="button-main" mat-flat-button color="button-main" [routerLink]="['/blog/home-blog']">
+        <button class="button-main" mat-flat-button color="button-main" [routerLink]="['/product/home-product']">
           Ver todos los productos
         </button>
       </div>

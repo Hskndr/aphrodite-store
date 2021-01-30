@@ -28,7 +28,9 @@ export class ContactComponent {
     return new FormGroup({
       email: new FormControl('', [Validators.required, Validators.minLength(5), Validators.pattern(this.emailPattern)]),
       name: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      message: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(200)]),
+      message: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(2000)]),
+      date: new FormControl(''),
+      read: new FormControl(''),
     });
   }
 
@@ -38,6 +40,11 @@ export class ContactComponent {
 
   onSaveForm(): void {
     if (this.contactForm.valid) {
+      this.contactForm.patchValue({
+        date: this.setDate(),
+        read: false,
+      });
+      console.log(this.date);
       this.dbData.saveMessage(this.contactForm.value);
       this.onResetForm();
       this.contactSend = true;

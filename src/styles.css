@@ -12,25 +12,25 @@
   --color-six: rgb(94, 152, 159);
   --color-seven: #DEF7F3;
   --color-eight: #ffffff;
-  --color-nine:  rgba(21, 209, 162, 0.1);
 }
 
-body {
-  background-color: var(--color-one);
-}
+/* Index */
 
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  /* Slow Transition between anchor */
-  scroll-behavior: smooth;
+  background-color: var(--color-one);
   margin: 0;
   padding: 0;
+  /* Slow Transition between anchor */
+  scroll-behavior: smooth;
 }
+
+/** app.component */
 
 /* Header */
 
 header {
-  min-height: 11vh;
+  min-height: 13vh;
   background-color: var(--color-one);
   padding: 0.25rem;
 }
@@ -41,7 +41,7 @@ header button {
 
 main {
   min-height: 80vh;
-  background-color: rgba(21, 209, 162, 0.1);
+  background-color: var(--color-seven);
   margin: 0;
   padding: 0;
 }
@@ -64,9 +64,19 @@ a {
 
 /*Buttons*/
 
+.content-button-main {
+  width: 100%;
+  text-align: center;
+}
+
 .button-main {
-  color: rgba(0, 0, 0, 0.8)!important;
-  background-color: rgba(21, 209, 162, 0.1)!important;
+  color: var(--color-one)!important;
+  background-color: var(--color-seven)!important;
+  margin: 0.5rem;
+}
+
+.button-main:hover {
+  background-color: var(--color-six)!important;
 }
 
 /*Headers*/
@@ -90,8 +100,14 @@ form {
   margin: 1rem;
 }
 
-form mat-form-field {
+form mat-form-field, Mat-form-field {
   width: 100%;
+}
+
+.login-register-p {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
 }
 
 /* WRAP CONTAINER */
@@ -110,7 +126,6 @@ form mat-form-field {
 /*BLOG*/
 
 /*PRODUCTS*/
-
 
 .container-spinner {
   display: flex;
@@ -135,10 +150,8 @@ mat-chip .mat-chip.mat-primary.mat-standart-chip {
 /* Main toolbar Background-color */
 
 .mat-toolbar {
-  background: #ccc;
+  background: var(--color-four);
   color: var(--color-eight);
-  /* Delete */
-  /*   background-color: limegreen; */
 }
 
 /* My Styles */
@@ -152,16 +165,43 @@ mat-chip .mat-chip.mat-primary.mat-standart-chip {
 .borderw {
   border: 1px solid white;
 }
-.color{width: 45px;height: 45px;}
-.one{background-color:var(--color-one);}
-.two{background-color:var(--color-two);}
-.three{background-color:var(--color-three);}
-.four{background-color:var(--color-four);}
-.five{background-color:var(--color-five);}
-.six{background-color:var(--color-six);}
-.seven{background-color:var(--color-seven);}
-.eight{background-color:var(--color-eight);}
 
+.color {
+  width: 45px;
+  height: 45px;
+}
+
+.one {
+  background-color: var(--color-one);
+}
+
+.two {
+  background-color: var(--color-two);
+}
+
+.three {
+  background-color: var(--color-three);
+}
+
+.four {
+  background-color: var(--color-four);
+}
+
+.five {
+  background-color: var(--color-five);
+}
+
+.six {
+  background-color: var(--color-six);
+}
+
+.seven {
+  background-color: var(--color-seven);
+}
+
+.eight {
+  background-color: var(--color-eight);
+}
 
 /* Responsive site Media Querys  */
 

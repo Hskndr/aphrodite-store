@@ -30,7 +30,7 @@ export class BlogLoginComponent implements OnInit {
     this.authBlogSvc.loginByEmail(form)
       .then(res => {
         console.log('Successfully', res);
-        this.routerblog.navigate(['/blog/home-blog']);
+        this.routerblog.navigate(['/product/home-product']);
       }).catch(err => console.log('Error', err));
   }
 

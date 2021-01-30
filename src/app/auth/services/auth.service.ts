@@ -29,7 +29,7 @@ export class AuthService extends RoleValidator {
     );
   }
 
-  //Login Method
+  // Login Method
   async login(email: string, password: string): Promise<User> {
     try {
       const { user } = await this.afAuth.auth.signInWithEmailAndPassword(
@@ -42,7 +42,7 @@ export class AuthService extends RoleValidator {
       console.log(error);
     }
   }
-  //Register Method
+  // Register Method
   async register(email: string, password: string): Promise<User> {
     try {
       const { user } = await this.afAuth.auth.createUserWithEmailAndPassword(
@@ -55,21 +55,21 @@ export class AuthService extends RoleValidator {
       console.log(error);
     }
   }
-  //Logout Method
+  // Logout Method
   async logout() {
     try {
       await this.afAuth.auth.signOut();
-      //Se puede agregar los cambios en el localstorage.
+      // Se puede agregar los cambios en el localstorage.
     } catch (error) {
       console.log(error);
     }
   }
-  //Get current user Method
+  // Get current user Method
   getCurrentUser() {
     return this.afAuth.authState.pipe(first()).toPromise();
   }
 
-  //Send email Method
+  // Send email Method
   async sendVerificationEmail(): Promise<void> {
     return (await this.afAuth.auth.currentUser).sendEmailVerification();
   }

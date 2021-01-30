@@ -1,0 +1,33 @@
+<mat-toolbar color="link">
+
+  <mat-nav-list routerLinkActive="active">
+    <button mat-button routerLink="/product/home-product" class="inventario" routerLinkActive="active">
+      <mat-icon>list_alt</mat-icon>Inventario
+    </button>
+  </mat-nav-list>
+
+
+  <span class="tool-bar-space"></span>
+  <mat-nav-list routerLinkActive="active">
+    <button mat-button routerLink="posts" routerLinkActive="active">
+      <mat-icon>store</mat-icon>Productos
+    </button>
+  </mat-nav-list>
+
+  <div *ngIf="unReadMessages$ | async as messages">
+    <mat-nav-list routerLinkActive="active">
+      <button mat-button routerLink="message" routerLinkActive="active">
+        <mat-icon>email</mat-icon>Mensajes
+        <span *ngFor="let msg of messages" matBadge="{{unReadCounter}}" matBadgePosition="before" matBadgeColor="accent"
+          matBadgeOverlap="true"></span>
+      </button>
+    </mat-nav-list>
+  </div>
+
+  <mat-nav-list routerLinkActive="active">
+    <button mat-button routerLink="profile" routerLinkActive="active">
+      <mat-icon>account_circle</mat-icon>Perfil
+    </button>
+  </mat-nav-list>
+
+</mat-toolbar>

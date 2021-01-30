@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { BlogAdminComponent } from './blog-admin.component';
 import { AuthBlogGuard } from '../../shared/guards/auth-blog.guard';
+import { MsgDetailComponent } from './message/msg-detail/msg-detail.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
         loadChildren: () => import('./message/message.module').then(
           m => m.MessageModule
         )
+      },
+      {
+        path: 'msg-detail/:id',
+        component: MsgDetailComponent
       }
 
     ]

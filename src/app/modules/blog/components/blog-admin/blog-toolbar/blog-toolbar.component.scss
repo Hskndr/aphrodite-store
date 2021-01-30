@@ -1,0 +1,18 @@
+.mat-toolbar {
+  background: var(--color-eight);
+  color: var(--color-one);
+}
+
+.active {
+  background: rgba(221, 209, 162, 0.1);
+}
+
+@media (max-width: 600px) {
+  .inventario, .tool-bar-space {
+    display: none;
+  }
+
+  button{
+    font-size: 0.8rem;
+  }
+}
