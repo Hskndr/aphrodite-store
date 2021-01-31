@@ -14,7 +14,7 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class TableComponent implements OnInit, AfterViewInit {
 
-  displayedColumns: string[] = ['titlePost', 'tagsPost', 'pricePost', 'actions'];
+  displayedColumns: string[] = ['titlePost', 'brandPost', 'categoryPost', 'tagsPost', 'pricePost', 'actions'];
   dataSource = new MatTableDataSource();
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -52,19 +52,19 @@ export class TableComponent implements OnInit, AfterViewInit {
   onDeletePost(post: PostI) {
     // Genera el Modal
     Swal.fire({
-      title: 'Are you sure?',
-      text: `You won´t be able to revert this!`,
+      title: '¿Estás de acuerdo con hacerlo?',
+      text: `No serás capaz de revertir este proceso!`,
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
+      confirmButtonText: 'Sí, Eliminarlo!',
     }).then(result => {
       if (result.value) {
         this.postSvc.deletePostById(post).then(() => {
-          Swal.fire('Deleted', 'Your post has been deleted', 'success');
+          Swal.fire('Eliminado', 'Tu producto ha sido eliminado', 'success');
         }).catch((error) => {
-          Swal.fire('Error', 'There was an error deleting this post!', 'error');
+          Swal.fire('Error', 'Hubo un error eliminado el producto!', 'error');
         });
       }
     });

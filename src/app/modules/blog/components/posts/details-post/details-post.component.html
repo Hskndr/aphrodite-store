@@ -1,4 +1,4 @@
-<mat-card class="example-card" *ngIf="post$ | async as post; else loading">
+<mat-card class="product-card" *ngIf="post$ | async as post; else loading">
   <mat-card-header>
     <mat-card-title>
       {{ post.titlePost |uppercase }}
@@ -9,18 +9,69 @@
   </mat-card-header>
 
   <mat-card-content class="flex-content">
-    <img mat-card-image class="img-detail flex-item" [src]="post.imagePost" />
-    <p
-     class="flex-item">
-      {{ post.contentPost }}
-    </p>
+    <img mat-card-image class="flex-item-img efect-image-post" [src]="post.imagePost" />
+    <div class="flex-item">
+
+      <mat-label>Categoría: </mat-label>
+      <mat-card-subtitle>
+        {{ post.categoryPost }}
+      </mat-card-subtitle>
+      <mat-label>Colores:</mat-label>
+
+      <mat-chip-list aria-label="Fish selection">
+        <mat-chip *ngFor="let color of post.colorPost">{{ color}}</mat-chip>
+      </mat-chip-list>
+    </div>
   </mat-card-content>
+
+  <mat-tab-group mat-align-tabs="start">
+
+    <mat-tab label="DESCRIPCION">
+      <p>
+        {{ post.contentPost }}
+      </p>
+    </mat-tab>
+
+    <mat-tab label="INFORMACION ADICIONAL">
+
+      <div>
+        <mat-label>Marca: </mat-label>
+        <p>
+          {{ post.brandPost }}
+        </p>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div>
+        <mat-label>Colores: </mat-label>
+        <p *ngFor="let color of post.colorPost">
+          {{ color }}
+        </p>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div>
+        <mat-label>Categoría: </mat-label>
+        <p>
+          {{ post.categoryPost }}
+        </p>
+      </div>
+
+    </mat-tab>
+
+    <!--  <mat-tab label="VALORACION">
+      <p>Por Definir.</p>
+    </mat-tab> -->
+  </mat-tab-group>
 
   <mat-card-footer>
     <button mat-button *ngFor="let tag of post.tagsPost">
-      {{tag | uppercase}}
+      #{{tag | uppercase}}
     </button>
   </mat-card-footer>
+
 </mat-card>
 
 <ng-template #loading>

@@ -57,7 +57,9 @@
             </mat-error>
           </mat-error>
         </mat-form-field>
+
         <br>
+
         <mat-form-field appearance="fill">
           <mat-label>Email</mat-label>
 
@@ -77,7 +79,25 @@
             </mat-error>
           </mat-error>
         </mat-form-field>
+
         <br>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Teléfono</mat-label>
+
+
+          <input type="tel" matInput formControlName="phone" placeholder="Ingresa tu  Teléfono">
+
+          <mat-error class="alert-danger" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+            <mat-error class="container-error-message" *ngIf="phone.errors.required">
+              Telefono es requerido
+            </mat-error>
+
+          </mat-error>
+        </mat-form-field>
+
+        <br>
+
         <mat-form-field appearance="fill">
           <mat-label>Mensaje</mat-label>
 

@@ -1,38 +1,100 @@
 <div class="new-post-container">
+
   <form [formGroup]="newPostForm" (ngSubmit)="addNewPost(newPostForm.value)">
     <mat-form-field>
       <mat-label>Descripción</mat-label>
       <input type="text" matInput placeholder="Descripción Producto" formControlName="titlePost" />
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Detalles</mat-label>
-      <textarea type="text" matInput placeholder="Detalles Producto" formControlName="contentPost" ></textarea>
+      <mat-error class="alert-danger" *ngIf="titlePost.invalid && (titlePost.dirty || titlePost.touched)">
+        <mat-error class="container-error-message" *ngIf="titlePost.errors.required">
+          Descripción del Producto es Requerido
+        </mat-error>
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Categoría</mat-label>
-      <mat-select placeholder="Categorías" multiple formControlName="tagsPost">
-        <mat-option value="maquillaje">Maquillaje</mat-option>
+      <mat-select placeholder="Categoría" formControlName="categoryPost">
+        <mat-option value="Maquillaje">Maquillaje</mat-option>
         <mat-divider></mat-divider>
-        <mat-option value="ropa">Ropa</mat-option>
+        <mat-option value="Ropa">Ropa</mat-option>
         <mat-divider></mat-divider>
         <mat-option value="Accesorios">Accesorios</mat-option>
       </mat-select>
+      <mat-error class="alert-danger" *ngIf="categoryPost.invalid && (categoryPost.dirty || categoryPost.touched)">
+        <mat-error class="container-error-message" *ngIf="categoryPost.errors.required">
+          Categoría del Producto es Requerido
+        </mat-error>
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Precio</mat-label>
       <input type="text" matInput placeholder="Precio" formControlName="pricePost" />
+      <mat-error class="alert-danger" *ngIf="pricePost.invalid && (pricePost.dirty || pricePost.touched)">
+        <mat-error class="container-error-message" *ngIf="pricePost.errors.required">
+          Precio del Producto es Requerido
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Colores</mat-label>
+      <mat-select placeholder="Colores" multiple formControlName="colorPost">
+        <mat-option value="Azul">Azul</mat-option>
+        <mat-divider></mat-divider>
+        <mat-option value="Rojo">Rojo</mat-option>
+        <mat-divider></mat-divider>
+        <mat-option value="Verde">Verde</mat-option>
+      </mat-select>
+      <mat-error class="alert-danger" *ngIf="colorPost.invalid && (colorPost.dirty || colorPost.touched)">
+        <mat-error class="container-error-message" *ngIf="colorPost.errors.required">
+          Colores del Producto es Requerido
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Marca</mat-label>
+      <input type="text" matInput placeholder="Marca" formControlName="brandPost" />
+      <mat-error class="alert-danger" *ngIf="brandPost.invalid && (brandPost.dirty || brandPost.touched)">
+        <mat-error class="container-error-message" *ngIf="brandPost.errors.required">
+          Marca del Producto es Requerido
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Detalles</mat-label>
+      <textarea type="text" matInput placeholder="Detalles Producto" formControlName="contentPost"></textarea>
+      <mat-error class="alert-danger" *ngIf="contentPost.invalid && (contentPost.dirty || contentPost.touched)">
+        <mat-error class="container-error-message" *ngIf="contentPost.errors.required">
+          Detalles del Producto es Requerido
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Etiquetas</mat-label>
+      <mat-select placeholder="Etiquetas" multiple formControlName="tagsPost">
+        <mat-option value="Belleza">Belleza</mat-option>
+        <mat-divider></mat-divider>
+        <mat-option value="Labios">Labios</mat-option>
+        <mat-divider></mat-divider>
+        <mat-option value="Seducción">Seducción</mat-option>
+      </mat-select>
+      <mat-error class="alert-danger" *ngIf="tagsPost.invalid && (tagsPost.dirty || tagsPost.touched)">
+        <mat-error class="container-error-message" *ngIf="tagsPost.errors.required">
+          Etiquetas del Producto es Requerido
+        </mat-error>
+      </mat-error>
     </mat-form-field>
 
     <div class="container-input-file">
       <input type="file" formControlName="imagePost" (change)="handleImage($event)">
     </div>
 
-    <div class="container-button">
-      <button mat-flat-button color="primary" type="submit" class="mat-flat-button" value="Save"
-        [mat-dialog-close]="true">
+    <div class="content-button-main">
+      <button mat-flat-button type="submit" class="button-main" value="Save" [mat-dialog-close]="true">
         Guardar
       </button>
     </div>

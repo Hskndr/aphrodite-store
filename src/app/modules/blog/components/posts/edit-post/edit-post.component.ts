@@ -18,11 +18,22 @@ export class EditPostComponent implements OnInit {
     private postSvc: PostService
   ) { }
 
+  get titlePost() { return this.editPostForm.get('titlePost'); }
+  get contentPost() { return this.editPostForm.get('contentPost'); }
+  get pricePost() { return this.editPostForm.get('pricePost'); }
+  get categoryPost() { return this.editPostForm.get('categoryPost'); }
+  get colorPost() { return this.editPostForm.get('colorPost'); }
+  get brandPost() { return this.editPostForm.get('brandPost'); }
+  get tagsPost() { return this.editPostForm.get('tagsPost'); }
+
   public editPostForm = new FormGroup({
     id: new FormControl('', Validators.required),
     titlePost: new FormControl('', Validators.required),
     contentPost: new FormControl('', Validators.required),
     pricePost: new FormControl('', Validators.required),
+    categoryPost: new FormControl('', Validators.required),
+    colorPost: new FormControl('', Validators.required),
+    brandPost: new FormControl('', Validators.required),
     tagsPost: new FormControl('', Validators.required),
     imagePost: new FormControl('', Validators.required),
   });
@@ -34,7 +45,6 @@ export class EditPostComponent implements OnInit {
   }
 
   editPost(post: PostI) {
-
 
     if (this.image === this.imageOriginal) {
       post.imagePost = this.imageOriginal;
@@ -56,7 +66,18 @@ export class EditPostComponent implements OnInit {
       titlePost: this.post.titlePost,
       contentPost: this.post.contentPost,
       tagsPost: this.post.tagsPost,
+      categoryPost: this.post.categoryPost,
+      colorPost: this.post.colorPost,
+      brandPost: this.post.brandPost,
       pricePost: this.post.pricePost,
     });
   }
+
+  setDate() {
+    const date = new Date();
+    console.log('actualdate', date);
+    return date;
+  }
+
+
 }

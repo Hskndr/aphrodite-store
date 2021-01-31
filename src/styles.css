@@ -79,6 +79,10 @@ a {
   background-color: var(--color-six)!important;
 }
 
+.content-close-button {
+  text-align: right;
+}
+
 /*Headers*/
 
 /* AUTH */
@@ -132,6 +136,20 @@ form mat-form-field, Mat-form-field {
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.efect-image-post {
+  transform: scale(1, 1);
+  transition: all 0.5s ease-out;
+
+}
+.efect-image-post:hover {
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem var(--color-seven);
+  -webkit-box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem var(--color-seven);
+  transform: scale(0.9, 0.9);
+  transition: all 0.5s ease-out;
 }
 
 /*TOOLBAR*/

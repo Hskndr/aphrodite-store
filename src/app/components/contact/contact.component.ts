@@ -22,6 +22,7 @@ export class ContactComponent {
   get name() { return this.contactForm.get('name'); }
   get email() { return this.contactForm.get('email'); }
   get message() { return this.contactForm.get('message'); }
+  get phone() { return this.contactForm.get('phone'); }
 
   createForm() {
 
@@ -29,6 +30,7 @@ export class ContactComponent {
       email: new FormControl('', [Validators.required, Validators.minLength(5), Validators.pattern(this.emailPattern)]),
       name: new FormControl('', [Validators.required, Validators.minLength(5)]),
       message: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(2000)]),
+      phone: new FormControl('', Validators.required),
       date: new FormControl(''),
       read: new FormControl(''),
     });

@@ -29,6 +29,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTreeModule } from '@angular/material/tree';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatTabsModule} from '@angular/material/tabs';
 
 const matModules = [
   MatButtonModule,
@@ -59,7 +60,8 @@ const matModules = [
   MatSliderModule,
   MatProgressBarModule,
   MatExpansionModule,
-  MatBadgeModule
+  MatBadgeModule,
+  MatTabsModule
 ];
 @NgModule({
   declarations: [],

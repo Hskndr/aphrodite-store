@@ -1,7 +1,9 @@
 .image-post {
   height: 16rem;
+
 }
-.title-productos{
+
+.title-productos {
   text-align: center;
 }
 .card-img-top {
@@ -25,7 +27,7 @@ mat-card {
   justify-content: center;
   margin: 1rem 0px;
 }
-#home{
+#home {
   margin-top: 0.1rem;
 }
 #about {
@@ -47,7 +49,7 @@ mat-card {
     opacity: 0.8;
     border-radius: 0.5rem;
     &:hover {
-      background-color:var(--color-one);
+      background-color: var(--color-one);
       font-size: 1.2rem;
     }
   }

@@ -15,8 +15,18 @@
     <td mat-cell *matCellDef="let element"> {{element.titlePost}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="tagsPost">
+  <ng-container matColumnDef="brandPost">
+    <th mat-header-cell *matHeaderCellDef > Marca </th>
+    <td mat-cell *matCellDef="let element"> {{element.brandPost}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="categoryPost">
     <th mat-header-cell *matHeaderCellDef > Categoría </th>
+    <td mat-cell *matCellDef="let element"> {{element.categoryPost}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tagsPost">
+    <th mat-header-cell *matHeaderCellDef > Etiqueta </th>
     <td mat-cell *matCellDef="let element"> {{element.tagsPost}} </td>
   </ng-container>
 

@@ -22,6 +22,8 @@ const routes: Routes = [
 
   { path: 'product-admin', loadChildren: () => import('./components/blog-admin/blog-admin.module').then(m => m.BlogAdminModule) },
   { path: 'product-login', loadChildren: () => import('./components/blog-login/blog-login.module').then(m => m.BlogLoginModule) },
+  // tslint:disable-next-line: max-line-length
+  { path: 'upload-image', loadChildren: () => import('./shared/components/upload-image/upload-image.module').then(m => m.UploadImageModule) },
 ];
 
 @NgModule({

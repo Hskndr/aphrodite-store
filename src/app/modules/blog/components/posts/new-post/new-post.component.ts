@@ -15,10 +15,22 @@ export class NewPostComponent implements OnInit {
     private postSvc: PostService
   ) { }
 
+  get titlePost() { return this.newPostForm.get('titlePost'); }
+  get contentPost() { return this.newPostForm.get('contentPost'); }
+  get pricePost() { return this.newPostForm.get('pricePost'); }
+  get categoryPost() { return this.newPostForm.get('categoryPost'); }
+  get colorPost() { return this.newPostForm.get('colorPost'); }
+  get brandPost() { return this.newPostForm.get('brandPost'); }
+  get tagsPost() { return this.newPostForm.get('tagsPost'); }
+
+
   public newPostForm = new FormGroup({
     titlePost: new FormControl('', Validators.required),
     contentPost: new FormControl('', Validators.required),
     pricePost: new FormControl('', Validators.required),
+    categoryPost: new FormControl('', Validators.required),
+    colorPost: new FormControl('', Validators.required),
+    brandPost: new FormControl('', Validators.required),
     tagsPost: new FormControl('', Validators.required),
     imagePost: new FormControl('', Validators.required),
   });
@@ -35,4 +47,6 @@ export class NewPostComponent implements OnInit {
     this.image = event.target.files[0];
     console.log('Image before save post', this.image);
   }
+
+
 }

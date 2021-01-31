@@ -68,9 +68,14 @@ export class PostService {
       titlePost: post.titlePost,
       contentPost: post.contentPost,
       pricePost: post.pricePost,
+      categoryPost: post.categoryPost,
+      colorPost: post.colorPost,
+      brandPost: post.brandPost,
       imagePost: this.downloadURL,
       fileRef: this.filePath,
       tagsPost: post.tagsPost,
+      createdAt: post.createdAt,
+      editedAt: post.editedAt,
     };
     // TODO: editpost
     // Verificar si tiene id

@@ -26,8 +26,9 @@
 
 
           <mat-card>
-            <img mat-card-image class="image-post" [src]="post.imagePost" alt="Image Post" />
-
+            <a [routerLink]="['/product/product-post', post.id]">
+              <img mat-card-image class="image-post efect-image-post" [src]="post.imagePost" alt="Image Post" />
+            </a>
             <mat-card-content>
               <p>{{ post.pricePost |currency: '$ ARS ' }}</p>
             </mat-card-content>
@@ -53,7 +54,7 @@
         ABOUT CARD
       -->
     <mat-card id="about">
-      <p >
+      <p>
         Aphrodite (en en griego antiguo, Ἀφροδίτη) es, en la la mitología griega, la diosa de la belleza, la sensualidad
         y el amor.
 

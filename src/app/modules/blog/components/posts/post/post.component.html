@@ -8,9 +8,9 @@
 </mat-card-header>
 
 <mat-card>
-
-  <img mat-card-image [src]="post.imagePost" alt="Image Post" />
-
+  <a [routerLink]="['/product/product-post', post.id]">
+    <img mat-card-image class="efect-image-post" [src]="post.imagePost" alt="Image Post" />
+  </a>
   <mat-card-content>
     <p>
       {{ post.contentPost }}
@@ -26,4 +26,5 @@
     <div *ngFor="let tag of post.tagsPost" [ngClass]="tag">
       #{{ tag | uppercase}}</div>
   </mat-card-actions>
+
 </mat-card>
